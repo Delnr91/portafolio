@@ -1,37 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400&display=swap" rel="stylesheet">
-    <title>Encriptador</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+  <!-- Iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Hoja de estilos -->
+  <link rel="stylesheet" href="./styles.css">
+  <title>Challenge Encriptador</title>
 </head>
+
 <body>
-    <header>
-        <img class="logo" src="/imagenes/Frame 6.png" alt="logo de alura">
-    </header>
-    <main>
-        <section>
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aqui"></textarea>
-            <div>
-                <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
-            </div>
-            <div class="botones">
-                <button class="btn-encriptar" onclick="btnEncriptar()">Encriptar</button>
-                <button class="btn-desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
-            </div>
-        </section>
-        <section>
-            <textarea class="mensaje" cols="20" rows="10"></textarea>
-            <div>
-                <button class="copiar" onclick="copiar()">Copiar</button>
-            </div>
-        </section>
-    </main>
-<script src="/script.js"></script>
+
+  <header>
+    <div class="div-header">
+      <a href="https://github.com/ibrahimhc19" target="_blank"><img class="logoGithub" src="./imagenes/github-Ibrahimhc19.png" alt="Logo usuario github Ibrahim Calzadilla"></a>
+      <a href="https://www.aluracursos.com/" target="_blank"><img class="logoOne" src="./imagenes/aluraoracle.png"
+          alt="Alura One Logo"></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <div class="txt-wrapper">
+        <div>
+          <p id="aviso"> <i class="fa-solid fa-circle-exclamation"></i> Solo letras minúsculas y sin acentos</p>
+
+          <textarea class="paraEncriptar" cols="30" rows="10" placeholder="Introduce el texto acá"></textarea>
+          <textarea class="paraDesencriptar" cols="30" rows="10" disabled></textarea>
+      </div>
+      <div class=" botoes">
+        <button id="encriptar" class="btnclss">Encriptar</button>
+        <button id="desencriptar" class="btnclss">Desencriptar</button>
+        <button id="copy" class="toCopy btnclss" >Copiar</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="txt-container">
+      <p>Challenge ONE G5 - Encriptador de texto</p>
+      <a href="https://github.com/ibrahimhc19" target="_blank"><p>Desarrollado por Ibrahim Calzadilla Rada <i class="fa-brands fa-github"></i></p></a>
+      <p>Oracle Next Education - Alura 2023</p>
+    </div>
+  </footer>
+  <script src="./script.js"></script>
 </body>
 </html>
