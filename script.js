@@ -1,90 +1,82 @@
-const paraEncriptar = document.querySelector(".paraEncriptar");
-const paraDesencriptar = document.querySelector(".paraDesencriptar");
-
-// La letra "e" es convertida para "enter"
-// La letra "i" es convertida para "imes"
-// La letra "a" es convertida para "ai"
-// La letra "o" es convertida para "ober"
-// La letra "u" es convertida para "ufat"
+const textArea = document.querySelector(".text-area");
+const mensaje = document.querySelector(".mensaje");
+const copia = document.querySelector(".copiar");
+copia.style.display = "none"
 
 
-// Funcion para encriptar
-function encriptar(textoParaEncriptar) {
-  let arregloCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-  textoParaEncriptar = textoParaEncriptar.toLowerCase();
+function validarTexto(){
+    let textoEscrito = document.querySelector(".text-area").value;
+    let validador = textoEscrito.match(/^[a-z]*$/);
 
-  for (let i = 0; i < arregloCodigo.length; i++) {
-    if (textoParaEncriptar.includes(arregloCodigo[i][0])) {
-      textoParaEncriptar = textoParaEncriptar.replaceAll(arregloCodigo[i][0], arregloCodigo[i][1]);
+    if(!validador || validador === 0) {
+        alert("Solo son permitidas letras minúsculas y sin acentos")
+        location.reload();
+        return true;
     }
-  }
-  return textoParaEncriptar;
 }
 
 
-//Funcion validar texto
-function validarTextoEncriptar(texto) {
-  var patron = /^[a-z\s]+$/;
-  return patron.test(texto);
-}
-
-// Funcion para el boton de encriptar
-document.getElementById('encriptar').onclick = botonEncriptar;
-function botonEncriptar() {
-  const textoEncriptar = paraEncriptar.value;
-
-  if (validarTextoEncriptar(textoEncriptar)){
-    const stringEncriptado = encriptar(paraEncriptar.value);
-    paraDesencriptar.value = stringEncriptado;
-    paraEncriptar.value = "";
-    paraDesencriptar.style.backgroundImage = "none";
-    let botonCopy = document.getElementById("copy");
-    botonCopy.style.display = "block";
-  } else{
-    alert("Texto invalido, solo se permiten letras minúsculas y sin acentos")
-    paraEncriptar.value = ""
-  }
-
-}
-
-
-// Funcion para desencriptar
-function desencriptar(textoEncriptado) {
-  let arregloCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
-  textoEncriptado = textoEncriptado.toLowerCase();
-
-  for (let i = 0; i < arregloCodigo.length; i++) {
-    if (textoEncriptado.includes(arregloCodigo[i][1])) {
-      textoEncriptado = textoEncriptado.replaceAll(arregloCodigo[i][1], arregloCodigo[i][0]);
+function btnEncriptar(){
+    if(!validarTexto()) {
+        const textoEncriptado = encriptar(textArea.value)
+        mensaje.value = textoEncriptado
+        mensaje.style.backgroundImage = "none"
+        textArea.value = "";
+        copia.style.display = "block"
+    
     }
-  }
-  return textoEncriptado;
+}
+
+//Laves de encriptacion
+// `La letra "e" es convertida para "enter"`
+// `La letra "i" es convertida para "imes"`
+// `La letra "a" es convertida para "ai"`
+// `La letra "o" es convertida para "ober"`
+// `La letra "u" es convertida para "ufat"`
+
+
+function encriptar(stringEncriptada){
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringEncriptada = stringEncriptada.toLowerCase()
+
+    for(let i = 0; i < matrizCodigo.length; i++){
+        if(stringEncriptada.includes(matrizCodigo[i][0])){
+            stringEncriptada = stringEncriptada.replaceAll(matrizCodigo[i][0], matrizCodigo[i][1])
+
+        }
+
+    }
+    return stringEncriptada
 }
 
 
-// Funcion para el boton de desencriptar
-document.getElementById("desencriptar").onclick = botonDesencriptar;
-function botonDesencriptar() {
-  const stringDesencriptado = desencriptar(paraEncriptar.value);
-  paraEncriptar.value = "";
-  paraDesencriptar.value = stringDesencriptado;
-  paraDesencriptar.style.backgroundImage = "none";
-  let botonCopy = document.getElementById("copy");
-  botonCopy.style.display = "block";
+
+function btnDesencriptar(){
+    const textoEncriptado = desencriptar(textArea.value)
+    mensaje.value = textoEncriptado
+    textArea.value = "";
+    
 }
 
-// Funcion para copiar al textarea1 y al portapapeles
-document.getElementById("copy").onclick=copiar;
-function copiar() {
-  let texto = paraDesencriptar.value;
-  navigator.clipboard.writeText(texto)
-  paraDesencriptar.value = " ";
-  paraEncriptar.value = texto;
 
-  let botonCopy = document.getElementById("copy");
-  botonCopy.style.display = "none";
+function desencriptar(stringDesencriptada){
+    let matrizCodigo = [["e", "enter"], ["i", "imes"], ["a", "ai"], ["o", "ober"], ["u", "ufat"]];
+    stringDesencriptada = stringDesencriptada.toLowerCase()
 
-  paraDesencriptar.style.backgroundImage = "";
-  alert("Copiado al portapapeles y al campo de entrada");
+    for(let i = 0; i < matrizCodigo.length; i++){
+        if(stringDesencriptada.includes(matrizCodigo[i][1])){
+            stringDesencriptada = stringDesencriptada.replaceAll(matrizCodigo[i][1] , matrizCodigo[i][0])
 
+        }
+
+    }
+    return stringDesencriptada
+}
+
+
+function copiar(){
+    mensaje.select();
+    navigator.clipboard.writeText(mensaje.value)
+    mensaje.value = "";
+    alert("Texto Copiado")
 }

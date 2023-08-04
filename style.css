@@ -56,7 +56,7 @@ main{
 .mensaje{
     height: 630px;
     background: var(--bg-color);;
-    background-image: url("../imagenes/Muñeco.png");
+    background-image: url("./imagenes/Muñeco.png");
     background-repeat: no-repeat;
     background-position: center;
     border: none;
