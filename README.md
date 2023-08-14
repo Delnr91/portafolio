@@ -1,12 +1,15 @@
 <em> # Portafolio </em>
 
-<h1 align="center"> <Encriptador de Texto - Oracle ONE - Alura </h1>
+<h1> <Encriptador de Texto - Oracle ONE - Alura </h1>
 
 Es el primer proyecto como parte de mi formación como desarrollador, en el programa Oracle ONE - Alura.
 
 Consiste en un encriptador de texto basico, para mostrar habilidades aprendidas sobre javscript.
 
-##Instrucciones
+
+<em> # ##Instrucciones</em>
+
+
 Las instrucciones completas del desafío se encuentran en el siguiente enlace: https://trello.com/b/WTdfcewC/encriptador-de-texto-alura-challenges-oracle-one
 
 
