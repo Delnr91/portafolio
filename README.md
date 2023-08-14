@@ -1,26 +1,27 @@
 
-<em> # Encriptador de Texto - Oracle ONE - Alura  </em>
+# Challenge ONE | Lógica de Programación - Encriptador de texto
 
-[Descripción del proyecto]
+### Descripcion del proyecto:
 
-#Es el primer proyecto como parte de mi formación como desarrollador, en el programa Oracle ONE - Alura.
+Es el primer proyecto como parte de mi formación como desarrollador, en el programa Oracle ONE - Alura.
 
 Consiste en un encriptador de texto basico, para mostrar habilidades aprendidas sobre javscript.
 
-<em> # ##Instrucciones</em>
+
+## Instrucciones
+
+#### Las Instrucciones para guiar en la resolucion del desafio [¡Haciendo clic aquí!](https://www.aluracursos.com/challenges/challenge-one-logica)
 
 
-Las instrucciones completas del desafío se encuentran en el siguiente enlace: https://trello.com/b/WTdfcewC/encriptador-de-texto-alura-challenges-oracle-one
-
-
-
-##Puedes ver la página acá:
+---
+## Puedes ver la página acá:
 https://delnr91.github.io/portafolio/
+--- 
 
-Recursos utilizados
-Imagen del logo de Alura: aluraoracle.png
-Imagen para el área de texto encriptado: a_de_alura.png
-CSS Reset: reset.css
+## Recursos utilizados:
+1) Imagen del logo de Alura: aluraoracle.png
+2) Imagen para el área de texto encriptado: a_de_alura.png
+3) CSS Reset: reset.css
 
-Autor
-Este proyecto fue desarrollado por Daniel Núñez Rojas
+## Autor:
+### Este proyecto fue desarrollado por: Daniel Núñez Rojas
