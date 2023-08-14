@@ -1,4 +1,5 @@
-##portafolio 
+<em> # Portafolio </em>
+
 <h1 align="center"> <Encriptador de Texto - Oracle ONE - Alura </h1>
 
 Es el primer proyecto como parte de mi formación como desarrollador, en el programa Oracle ONE - Alura.
