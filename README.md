@@ -1,11 +1,9 @@
-<em> # Portafolio </em>
 
-<h1> <Encriptador de Texto - Oracle ONE - Alura </h1>
+<em> # Encriptador de Texto - Oracle ONE - Alura  </em>
 
-Es el primer proyecto como parte de mi formación como desarrollador, en el programa Oracle ONE - Alura.
+*[Descripción del proyecto](#Es el primer proyecto como parte de mi formación como desarrollador, en el programa Oracle ONE - Alura.
 
-Consiste en un encriptador de texto basico, para mostrar habilidades aprendidas sobre javscript.
-
+Consiste en un encriptador de texto basico, para mostrar habilidades aprendidas sobre javscript.)
 
 <em> # ##Instrucciones</em>
 
